@@ -1,0 +1,19 @@
+#
+# https://github.com/alam00000/bentopdf
+#
+services:
+  bentopdf:
+    image: bentopdf/bentopdf-simple:latest
+    container_name: bentopdf
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    #ports:
+      #- 8080:8080
+    restart: unless-stopped
+
+networks:
+  default:
+    name: ${CONNET}
+    external: true
