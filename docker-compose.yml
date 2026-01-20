@@ -3,7 +3,7 @@
 #
 services:
   bentopdf:
-    image: ghcr.io/alam00000/bentopdf:latest
+    image: ghcr.io/alam00000/bentopdf-simple:latest
     container_name: bentopdf
     environment:
       - PUID=${PUID}
